@@ -1,7 +1,4 @@
-if 5 > 2:
-  print("Five is greater than two!")
-#syntaxis requires spaces devisions(>1, commonly used: 4)
+print("hello world!")
 
-#comments
-"""if 5 > 2:
-  print("multiline string that is ignored")"""
+if(5>2):
+  print("five is greater than two")
