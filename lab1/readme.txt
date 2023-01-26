@@ -144,4 +144,163 @@ myfunc()
 print("Python is " + x)
 
 #Python Data types
+Print the data type of the variable x:
+x = 5
+print(type(x))
+
+#int
+x = 5
+print("int type example: ", x)
+
+#float
+x = 5.678
+print("float type example: ", x)
+
+#complex
+#Complex numbers are written with a "j":
+x = 5j + 5
+print("complex type example: ", x)
+
+#type conversions
+-complex type number can't be converted into another type
+x = 5
+print("Int: ", x)
+
+a = float(x)
+print(type(a))
+
+y = 4.565786
+print("Float: ", y)
+
+b = int(y)
+print(type(b))
+
+#random -> module
+import random
+print(random.range(1, 19))
+
+#Python Numbers
+numeric types:
+-int
+-float
+-complex
+
+#Python casting
+float type into int at input process
+x = int("3), x will be 3
+y = int(3.554456), y will be 3
+z = float(1), z will be 1.0
+i = str(3.0), i will be '3.0'
+
+#Python Strings
+strings '', ""
+print("hello") or ('hello')
+
+- assign str as variable:
+a = "hello"
+print(a)
+
+- multiline strings
+a = """Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua."""
+print(a)
+
+or 
+a = '''Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua.'''
+print(a)
+-in the result, 
+the line breaks are inserted at the same position as in the code.
+
+-Strings are arrays
+a = "Hello, World!"
+print(a[1])
+result: e
+
+-Looping through a string
+for x in "banana":
+  print(x)
+
+-String lenght
+a = "Hello, world"
+print(len(a))
+
+-Check String
+txt = "Free cheese is in the claw of a lie"
+print("free" in txt)
+
+combine with if statement
+txt = "Free cheese is in the claw of a lie"
+if "free" in txt:
+    print("Warning!")
+
+-If NOT
+txt = txt = "Free cheese is in the claw of a lie"
+print("Safe" not in txt)
+
+combine with if
+txt = "Free cheese is in the claw of a lie"
+if "free" not in txt:
+    print("Safe")
+
+#Slicing string
+b = "Hello, World!"
+print(b[2:5]) -> range of Slicing
+
+use slice from Start
+print(b[:5])
+
+slice to the end
+print(b[2:])
+
+Negative indexing
+print(b[-5:-2])
+
+-Modify strings
+upper() method
+a = "Hello, world"
+print(a.upper())
+
+lower() method
+print(a.lower())
+
+-Remove Whitespace
+a = " Hello, world "
+print(a.strip())
+returns "Hello, World"
+
+-Replace string
+a = "Hello, world"
+print(a.replace("H", "J"))
+
+-Split string
+a = "Hello, world"
+print(a.split(","))
+return: ['Hello', 'World']
+
+-String Concatenation
+a = "Hello"
+b = "world"
+c = a + b
+print(c)
+
+-add space
+c = a + " " + b
+print(c)
+
+-to combine string with numbers
+age = 17
+txt = "My name is Zhaniya, and I am {}"
+print(txt.format(age))
+
+can use indexes
+age = 17
+bday = 21
+month = 9
+myformat = "My name is Zhaniya, my birthday is {1}, {2}, I am {0} y.o"
+print(myorder(format(age, bday, month)))
 
