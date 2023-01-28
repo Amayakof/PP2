@@ -292,6 +292,7 @@ print(c)
 c = a + " " + b
 print(c)
 
+-Format Strings
 -to combine string with numbers
 age = 17
 txt = "My name is Zhaniya, and I am {}"
@@ -304,3 +305,51 @@ month = 9
 myformat = "My name is Zhaniya, my birthday is {1}, {2}, I am {0} y.o"
 print(myorder(format(age, bday, month)))
 
+-Escape characters
+txt = "We are the so-called \"Vikings\" from the north."
+
+-Strings Methods
+All string methods return new values, 
+they don't modify the original string
+
+*capitalize()
+*find()
+*format()
+*index()
+
+#Booleans
+-True or False values
+
+x = "Hello"
+y = 15
+
+print(bool(x))
+print(bool(y))
+
+-Any value except 0 is True
+-Any string is True except empty
+-Any list is True except empty
+
+Functions can return bool values
+
+#Python Operators
+Unusual cases:
+-Exponentiation: 2**3 -> 8
+-Floor division: 15//2 -> 7
+-and(instead of &); or(inst-d of ||)
+-is; is not
+Bitwise:
+-Not: ~x
+
+#If...Else
+-If...else
+a = 2
+b = 330
+print("A") if a > b else print("B")
+-shorthand version
+
+-elif
+another condition if "if" didn't work
+
+-pass
+If the statement is empty
