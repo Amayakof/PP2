@@ -13,3 +13,5 @@ def agent(nums):
 
 nums = list(map(int, input().split()))
 print(agent(nums))
+
+#PLZ ask abt the solution, for further work

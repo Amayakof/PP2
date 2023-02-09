@@ -7,3 +7,8 @@ def is_palindrome(s):
     char_list.reverse()
     s1 = ''.join(char_list)
     return s == s1
+s = input()
+if is_palindrome(s) == True:
+    print("Palindrome")
+else: print("Not Palindrome")
+
