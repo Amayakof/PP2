@@ -14,6 +14,6 @@ def solve(numheads, numlegs):
         num_rabbits = numheads - i
         if(num_chicken * 2 + num_rabbits * 4 == numlegs):
             break
-    print(f"Rabbits: {num_rabbits} Chicken: = {num_chicken}")
+    print(f"Rabbits: {num_rabbits} Chicken: {num_chicken}")
 
 solve(35, 94)

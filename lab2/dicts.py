@@ -37,3 +37,12 @@ car =	{
   "year": 1964
 }
 car.clear()
+
+#6
+car =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+car.setdefault(1, 600)
+print(car)
