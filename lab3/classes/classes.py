@@ -109,8 +109,8 @@ class Account():
             self.balance -= amount
             print(f"{amount} has been withdrawn from the deposit. Balance is {self.balance}")
 
-ba1 = Account("Beket")
-ba2 = Account("Medeu")
+ba1 = Account("Zhaniya")
+ba2 = Account("Koshkimbayeva")
 
 ba1.check_balance()
 ba1.withdrawal(1000)

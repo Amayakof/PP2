@@ -1,6 +1,6 @@
 import math
 
-# 7. Given a list of ints, return True if the array contains a 3 next to a 3 somewhere.
+# 7. Given a list of ints, return True if the array contains a 3 next to a 3 somewhere(!)
 print("!!!TASK 7!!!")
 def my_funct(nums):
     isTrue = False
