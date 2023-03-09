@@ -2,7 +2,8 @@
 
 import datetime
 
-date1 = datetime.datetime.today()
+fin = datetime.datetime.today()
 start = datetime.datetime(2005, 9, 21)
-end = date1 - start
+end = fin - start
+print(f"Standard output: {end}\n")
 print(f"Time difference in seconds: {end.total_seconds()}")

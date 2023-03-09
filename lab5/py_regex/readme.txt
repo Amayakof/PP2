@@ -1,21 +1,30 @@
-## Python RegEx exercises
+#RegEX#
+A RegEx, or Regular Expression, is a sequence of characters that forms a search pattern.
 
-1. Write a Python program that matches a string that has an `'a'` followed by zero or more `'b'`'s.
+Metacharacters
+Metacharacters are characters with a special meaning:
+[]	A set of characters
+\	Signals a special sequence (can also be used to escape special characters)
+.	Any character (except newline character)
+^	Starts with
+$	Ends with
+*	Zero or more occurrences
++	One or more occurrences
+?	Zero or one occurrences
+{}	Exactly the specified number of occurrences
+|	Either or	
+() Capture and group
 
-2. Write a Python program that matches a string that has an `'a'` followed by two to three `'b'`.
+example:
+Starts with The and ends with Spain
 
-3. Write a Python program to find sequences of lowercase letters joined with a underscore.
+import re
 
-4. Write a Python program to find the sequences of one upper case letter followed by lower case letters.
+txt = "The rain in Spain"
+x = re.search("^The.*Spain$", txt)
 
-5. Write a Python program that matches a string that has an `'a'` followed by anything, ending in `'b'`.
+RegEx Functions:
+findall - returns a list containing all matches
 
-6. Write a Python program to replace all occurrences of space, comma, or dot with a colon.
-
-7. Write a python program to convert snake case string to camel case string.
-
-8. Write a Python program to split a string at uppercase letters.
-
-9. Write a Python program to insert spaces between words starting with capital letters.
-
-10. Write a Python program to convert a given camel case string to snake case.
+Special Sequences
+A special sequence is a \ followed by one of the characters in the list below, and has a special meaning:

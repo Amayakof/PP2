@@ -1,11 +1,25 @@
-Python Directories and Files exercises
+OS module - provides functions for interacting with the operating system. 
+OS comes under Python’s standard utility modules.
 
-Write a Python program to list only directories, files and all directories, files in a specified path.
-Write a Python program to check for access to a specified path. Test the existence, readability, writability and executability of the specified path
-Write a Python program to test whether a given path exists or not. If the path exist find the filename and directory portion of the given path.
-Write a Python program to count the number of lines in a text file.
-Write a Python program to write a list to a file.
-Write a Python program to generate 26 text files named A.txt, B.txt, and so on up to Z.txt
-Write a Python program to copy the contents of a file to another file
-Write a Python program to delete file by specified path. Before deleting check for access and whether a given path exists or not.
+File hadling
+The open() function takes two parameters; filename, and mode.
+"r" - Read - Default value. Opens a file for reading, error if the file does not exist
 
+"a" - Append - Opens a file for appending, creates the file if it does not exist
+
+"w" - Write - Opens a file for writing, creates the file if it does not exist
+
+"x" - Create - Creates the specified file, returns an error if the file exists
+
+"t" - text mode
+
+"b" - binary mode
+
+To open a file for reading it is enough to specify the name of the file:
+f = open("demofile.txt", "rt")
+
+functions:
+- open()
+- read() -> also can specify how many characters to read: file.read(5)
+- readline() -> returns one line
+- close() -> on't forget to close the file when you finish working
