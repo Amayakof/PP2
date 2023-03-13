@@ -10,4 +10,3 @@ def TrapezoidArea(height, baseA, baseB):
     return (baseA + baseB) / 2 * height
 
 print(f"The area of Trapezoid: {TrapezoidArea(h, a, b)}")
-

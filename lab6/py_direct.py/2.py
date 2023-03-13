@@ -14,7 +14,7 @@ if os.access(path, os.R_OK):
 else: 
     print("Can't read") 
  
-if os.access(path, os.R_OK): 
+if os.access(path, os.W_OK): 
     print("Writable") 
 else: 
     print("Can't write") 

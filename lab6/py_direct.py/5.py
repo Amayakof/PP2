@@ -7,5 +7,6 @@ with open(path, 'w') as file:
  
     for s in list: 
         file.write(s + ' ') 
- 
+
+file.close()
 print("The list is in the file ", path) 

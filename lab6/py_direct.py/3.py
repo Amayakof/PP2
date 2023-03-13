@@ -2,7 +2,7 @@
 import os 
 
 #path = input("Please enter the path: ")
-path = '/Users/amayakof/Desktop/PP2/lab6/file.txt' 
+path = '/Users/amayakof/Desktop/PP2/lab6/text.txt' 
  
 if os.access(path, os.F_OK): 
     print("exists") 

@@ -1,13 +1,13 @@
 #Write a Python program to list only directories, files and all directories, files in a specified path. 
 import os 
 
-#path = input("Please enter the path: ")
-path = '/Users/amayakof/Desktop/PP2/lab6' 
+path = input("Please enter the path: ")
+#path = '/Users/amayakof/Desktop/PP2/lab6' 
  
 print("Directories: ") 
-for i in os.listdir(path): 
-    if os.path.isdir(os.path.join(path, i)): 
-        print(i) 
+for direct in os.listdir(path): 
+    if os.path.isdir(os.path.join(path, direct)): 
+        print(direct) 
  
  
 print("\nFiles: ") 
@@ -19,4 +19,3 @@ for file in os.listdir(path):
 print("\nAll directories and files: ") 
 for all in os.listdir(path): 
     print(all) 
-

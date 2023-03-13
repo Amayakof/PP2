@@ -84,9 +84,13 @@ print(x.strftime("%B"))
 - math.pi() -> PI value
 
 #JSON
-- syntax for storing and containing data
+JSON is a syntax for storing and exchanging data.
+
+JSON is text, written with JavaScript object notation.
+
+Python has a built-in package called json, which can be used to work with JSON data.
 
 Парсинг — это процесс автоматического сбора данных и их структурирования.
-
+Парсить — собирать и систематизировать информацию, размещенную на определенных сайтах, с помощью специальных программ,
+автоматизирующих процесс. 
 Можно перевести с Python на json и обратно
-

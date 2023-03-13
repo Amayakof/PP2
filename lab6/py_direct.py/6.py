@@ -1,8 +1,8 @@
 #Write a Python program to generate 26 text files named A.txt, B.txt, and so on up to Z.txt
 import os 
 import string 
- 
-alphabet = 'files' 
+
+alphabet = 'Files' 
 if not os.path.exists(alphabet): 
     os.makedirs(alphabet) 
  
