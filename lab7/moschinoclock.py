@@ -1,18 +1,30 @@
 #Create a simple clock application (only with minutes and seconds) which is synchronized with system clock. Use Mickey's right hand as minutes arrow and left - as seconds.
-import pygame
-pygame.init()
-clock = pygame.time.Clock()
+import pygame, sys
+from datetime import datetime
+import math
+
+def main():
+
+    # pygame initialization
+    pygame.init()
+    screen = pygame.display.set_mode((600, 600))
+    clock = pygame.time.Clock()
+    
+    # get the current time
+    curr_time = datetime.now()
+    curr_sec = curr_time.second
+    curr_min = curr_time.minute
 
 screen = pygame.display.set_mode((500, 586))
 
 pygame.display.set_caption("moschinoclock") #the title
-pygame.display.set_icon(pygame.image.load('/Users/amayakof/Desktop/PP2/pygame/game_files/icon/icon.jpg'))
+pygame.display.set_icon(pygame.image.load('/Users/amayakof/Desktop/PP2/lab7/pygame/game_files/icon/icon.jpg'))
 
 check = True
-bg = pygame.image.load("/Users/amayakof/Desktop/PP2/pygame/game_files/images/f_base.png")
-hours = pygame.image.load("/Users/amayakof/Desktop/PP2/pygame/game_files/images/f_hours.png")
-minutes = pygame.image.load("/Users/amayakof/Desktop/PP2/pygame/game_files/images/f_mins.png")
-seconds = pygame.image.load("/Users/amayakof/Desktop/PP2/pygame/game_files/images/sec.png")
+bg = pygame.image.load("/Users/amayakof/Desktop/PP2/lab7/pygame/game_files/images/f_base.png")
+hours = pygame.image.load("/Users/amayakof/Desktop/PP2/lab7/pygame/game_files/images/f_hours.png")
+minutes = pygame.image.load("/Users/amayakof/Desktop/PP2/lab7/pygame/game_files/images/f_mins.png")
+seconds = pygame.image.load("/Users/amayakof/Desktop/PP2/lab7/pygame/game_files/images/sec.png")
 
 angle = 0
 
