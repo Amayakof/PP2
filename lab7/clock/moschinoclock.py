@@ -39,12 +39,12 @@ def main():
         screen.fill(0)
         screen.blit(clock_image, (0, 0))
     
-        rot_minhand = pygame.transform.rotate(minhand_image, -1 * (6 * curr_min) - 160)
+        rot_minhand = pygame.transform.rotate(minhand_image, -1 * (6 * curr_min))
         rot_minhand_rect = rot_minhand.get_rect()
         rot_minhand_rect.center = minhand_rect.center
         screen.blit(rot_minhand, rot_minhand_rect)
     
-        rot_sechand = pygame.transform.rotate(sechand_image, -1 * (6 * curr_sec) + 90)
+        rot_sechand = pygame.transform.rotate(sechand_image, -1 * (6 * curr_sec))
         rot_sechand_rect =rot_sechand.get_rect()
         rot_sechand_rect.center = sechand_rect.center
         screen.blit(rot_sechand, rot_sechand_rect)
@@ -54,7 +54,7 @@ def main():
         curr_min = curr_time.minute
         
         pygame.display.update()
-        clock.tick(360)
+        clock.tick(60)
 
 
 if __name__ == "__main__":
