@@ -1,8 +1,6 @@
 import pygame as pg
 from datetime import datetime
 
-
-
 pg.init()
 
 WIDTH = 800

@@ -3,24 +3,24 @@ import pygame
 import time
 import random
 
-snake_speed = 15
+snake_speed = 10
 
 # размер окна
-window_x = 720
-window_y = 480
+window_x = 350
+window_y = 350
 
 # определение цветов
-black = pygame.Color(0, 0, 0)
-white = pygame.Color(255, 255, 255)
+white = pygame.Color(254, 250, 224)
+green = pygame.Color(96, 108, 56)
+brown = pygame.Color(188, 108, 37)
 red = pygame.Color(255, 0, 0)
-green = pygame.Color(0, 255, 0)
-blue = pygame.Color(0, 0, 255)
 
 # инициализация
 pygame.init()
 
 # Инициализирование игрового окно
-pygame.display.set_caption('Змейка')
+pygame.display.set_caption('GameBoy_Snakezz')
+pygame.display.set_icon(pygame.image.load("/Users/amayakof/Desktop/PP2/lab8:9/snake/cosmetics/icon.png"))
 game_window = pygame.display.set_mode((window_x, window_y))
 
 # Контроллер FPS (кадры в секунду)
@@ -30,26 +30,19 @@ fps = pygame.time.Clock()
 snake_position = [100, 50]
 
 # определение первых 4 блоков тела змеи
-snake_body = [[100, 50],
-              [90, 50],
-              [80, 50],
-              [70, 50]
-              ]
+snake_body = [[100, 50], [90, 50], [80, 50], [70, 50]]
 
 # fruit position
-fruit_position = [random.randrange(1, (window_x // 10)) * 10,
-                  random.randrange(1, (window_y // 10)) * 10]
+fruit_position = [random.randrange(1, (window_x // 10)) * 10, random.randrange(1, (window_y // 10)) * 10]
 
 fruit_spawn = True
 
-# установка направления змеи по умолчанию к
-# право
+# установка направления змеи по умолчанию к право
 direction = 'RIGHT'
 change_to = direction
 
 # начальная оценка
 score = 0
-
 
 # отображение функции Score
 def show_score(choice, color, font, size) :
@@ -71,7 +64,7 @@ def show_score(choice, color, font, size) :
 # функция завершения игры
 def game_over() :
     # создание объекта шрифта my_font
-    my_font = pygame.font.SysFont('times new roman', 50)
+    my_font = pygame.font.SysFont('Roboto', 50)
 
     # создание текстовой поверхности, на которой текст
     # будет нарисовано
@@ -89,8 +82,8 @@ def game_over() :
     game_window.blit(game_over_surface, game_over_rect)
     pygame.display.flip()
 
-    # через 2 секунды мы выйдем из программы
-    time.sleep(2)
+    # через 1 секунду мы выйдем из программы
+    time.sleep(1)
 
     # деактивация библиотеки pygame
     pygame.quit()
@@ -151,13 +144,12 @@ while True :
                           random.randrange(1, (window_y // 10)) * 10]
 
     fruit_spawn = True
-    game_window.fill(black)
+    game_window.fill(white)
 
     for pos in snake_body :
         pygame.draw.rect(game_window, green,
                          pygame.Rect(pos[0], pos[1], 10, 10))
-    pygame.draw.rect(game_window, white, pygame.Rect(
-        fruit_position[0], fruit_position[1], 10, 10))
+    pygame.draw.rect(game_window, brown, pygame.Rect(fruit_position[0], fruit_position[1], 10, 10))
 
     # Game Over conditions
     if snake_position[0] < 0 or snake_position[0] > window_x - 10 :
@@ -171,7 +163,7 @@ while True :
             game_over()
 
     # displaying score countinuously
-    show_score(1, white, 'times new roman', 20)
+    show_score(1, brown, 'Roboto', 40)
 
     # Refresh game screen
     pygame.display.update()
